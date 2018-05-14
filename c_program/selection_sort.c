@@ -22,6 +22,7 @@ int main(void){
 			if(arr[min]>arr[j])
 				min=j;
 		}
+		//Selection sort
 		if(i!=min){
 			tmp= arr[i];
 			arr[i] = arr[min];
