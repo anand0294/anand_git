@@ -29,6 +29,7 @@ Ans : During derefrencing of pointer the compiler will look at the base type of 
 10. Array of pointers (Pointer Array) : Every elements of this array is a pointer variable that can hold address
     of any variable of appropriate type. The syntax of declaring an array of pointers is similar to that of 
     arrays except that an asterik is placed before the array name. (e.g. int * p[5])
+    
 11. A pointer to void is a generic pointer that can point to any data type. We can assign address of any data type
     to a void pointer and a void pointer can be assigned to a pointer of any data type without any explicit cast.
 
