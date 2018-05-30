@@ -1,3 +1,8 @@
+/******************************************************/
+/*This program shows how to generate delay in linux OS*/
+/*		AUTHOR: ANAND MOHAN TIWARI 	       */
+/*******************************************************/
+
 #include<stdio.h>
 //#include<stdlib.h>
 #include<sys/time.h>
