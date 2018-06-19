@@ -20,7 +20,8 @@ int main(void){
 	long triggerTime = 5000;
 	gettimeofday(&tv, NULL);
 	last_triggerTime = ((tv.tv_sec * 1000)+(tv.tv_usec/1000));
-	printf("Previously Triggered time is : %ld\n", last_triggerTime);
+	//printf("Previously Triggered time is : %ld\n", last_triggerTime);
+	printf("previous time %s", ctime(&(tv.tv_sec)));
 	while(1){
 		gettimeofday(&tv, NULL);
 		current_time = ((tv.tv_sec*1000) + (tv.tv_usec/1000));
@@ -33,7 +34,8 @@ int main(void){
 		}
 
 	}
-	printf("Current time : %ld\n", current_time);
+	//printf("Current time : %ld\n", current_time);
+	printf("current time %s", ctime(&(tv.tv_sec)));
 	printf("Timer Ended\n");
 
 return 0;
