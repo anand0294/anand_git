@@ -4,13 +4,13 @@
 /*******************************************************/
 
 #include<stdio.h>
-//#include<stdlib.h>
 #include<sys/time.h>
+#include<time.h> //for use of function ctime
 
-void differ_time(long differ){
+void differ_time(double differ){
 
-	printf(" The generated delay is : %ld seconds \n", differ/1000);
-
+	printf(" The generated delay is : %g seconds \n", differ/1000);
+return;
 }
 
 int main(void){
@@ -20,8 +20,7 @@ int main(void){
 	long triggerTime = 5000;
 	gettimeofday(&tv, NULL);
 	last_triggerTime = ((tv.tv_sec * 1000)+(tv.tv_usec/1000));
-	//printf("Previously Triggered time is : %ld\n", last_triggerTime);
-	printf("previous time %s", ctime(&(tv.tv_sec)));
+	printf("previous time :%s\n", ctime(&(tv.tv_sec)));
 	while(1){
 		gettimeofday(&tv, NULL);
 		current_time = ((tv.tv_sec*1000) + (tv.tv_usec/1000));
@@ -34,8 +33,7 @@ int main(void){
 		}
 
 	}
-	//printf("Current time : %ld\n", current_time);
-	printf("current time %s", ctime(&(tv.tv_sec)));
+	printf("current time :%s\n", ctime(&(tv.tv_sec)));
 	printf("Timer Ended\n");
 
 return 0;
