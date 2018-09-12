@@ -1,0 +1,2 @@
+/home/intern2/Git_Work/anand_git/deviceDriver_linux/charDriver/manual_allocation/chr_dev_static.ko
+/home/intern2/Git_Work/anand_git/deviceDriver_linux/charDriver/manual_allocation/chr_dev_static.o
