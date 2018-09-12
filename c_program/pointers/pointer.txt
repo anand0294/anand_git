@@ -1,0 +1,35 @@
+1. All pointers irrespective of it's base type generally occupy same space in memory.
+
+Que : why do we have to mention the data type in declaration statement ??
+Ans : During derefrencing of pointer the compiler will look at the base type of pointer
+	will retrieve the information based on that base type.
+
+2. Global and static pointers are automatically initialized to NULL but when we declare 
+	an automatic pointer variable it contains garbage value i.e. pointing to some
+	other memory location.
+
+3. If we assign address of some other data type then compiler will not show any error
+	but the result will be incorrect.
+
+4. we can assign the value of one pointer variable to other, provided their base type is same.
+
+5. If a pointer contains NULL is derefrenced the result will implementation dependent.
+
+6. Pointer to pointer is generally used while passing a pointer variables to function.
+
+7. If you have an array of int type (e.g. int arr[10]) then it's type is "Constant pointer to int"
+
+8. Exception to above rule is when the array name is used as an operand of sizeof() operator
+   (e.g. sizeof(arr)) the value returned is size of whole array and when array name is operand
+   of & operator (e.g. &arr) the value is a pointer to whole array(not the first element).
+
+9. Pointer to an array(Array pointer) is represented as int (*ptr)[5], used when talking about multidimensional
+   array. It can point to an array of 5 integers. sizeof(ptr) = 20 bytes. 
+
+10. Array of pointers (Pointer Array) : Every elements of this array is a pointer variable that can hold address
+    of any variable of appropriate type. The syntax of declaring an array of pointers is similar to that of 
+    arrays except that an asterik is placed before the array name. (e.g. int * p[5])
+    
+11. A pointer to void is a generic pointer that can point to any data type. We can assign address of any data type
+    to a void pointer and a void pointer can be assigned to a pointer of any data type without any explicit cast.
+
