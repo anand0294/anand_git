@@ -13,6 +13,7 @@
 int main(){
 	int fd;
 	ssize_t retbyte;
+	char buf[100];
 	char buff[100] = "Hi Anand you successfully test the character driver program implemention. 'Congrats'";
 	fd = open("/dev/static_charDev", O_RDWR);
 	if(fd<0){
@@ -22,7 +23,7 @@ int main(){
 	write(fd, buff, 100);
 	/*Reading the content from the device*/
 	printf("Reading the content from the device\n");
-	retbyte = read(fd, buff, 3000);
+	retbyte = read(fd, buf, 3000);
 	if(retbyte<0){
 		printf("Failed to read\n");
 	}
