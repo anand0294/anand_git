@@ -1,0 +1,5 @@
+kernel//home/mohan/practiceDriver/module/mod.ko
+kernel//home/mohan/practiceDriver/module/mod1.ko
+kernel//home/mohan/practiceDriver/module/mod2.ko
+kernel//home/mohan/practiceDriver/module/mod3.ko
+kernel//home/mohan/practiceDriver/module/depmod.ko
