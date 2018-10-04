@@ -1,0 +1,7 @@
+Use insmod filename.ko to insert the driver as module in the kernel.
+Execute the Application test program to write data into driver and
+read from it.
+Use rmmod filename to remove the module.
+
+Use dmesg command to see the log that kernel module is inserted or
+released successfully or not.
