@@ -75,8 +75,9 @@ static int amt_release(struct inode * inode, struct file * fd){
 
 static ssize_t amt_read(struct file * fd, char __user * buffer, size_t len, loff_t *pos){
 	int noOfbytes;
-	noOfbytes = (len - copy_to_user(buffer + *pos, buffer, len));
+	noOfbytes = (len - copy_to_user(buffer/*to*/,driver_buff/*from*/ + *pos, len/*How many bytes*/));
 	noOfbytes +=*pos;
+	printk(KERN_INFO "Data Received is : %s\n , No of bytes : %d\n", driver_buff, noOfbytes);
 return noOfbytes;
 }
 

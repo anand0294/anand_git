@@ -16,7 +16,7 @@
 #include<stdlib.h>
 
 char write_buf[1500];
-char read_buf[1500];
+char read_buf[1500]/*, * x*/;
 
 int main(){
 
@@ -47,7 +47,7 @@ char option;
 
 			 case '2':
                                 printf("Data Reading ...");
-                                read(fd, read_buf, 1024);
+                                read(fd, read_buf, 1000);
                                 printf("Done!\n\n");
                                 printf("Data = %s Fd Value = %d\n\n", read_buf, fd);
                                 break;
@@ -56,7 +56,6 @@ char option;
                                 exit(1);
                                 break;
                         default:
-                                printf("Enter Valid option = %c\n",option);
                                 break;
 
 
