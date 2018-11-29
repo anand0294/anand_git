@@ -1,0 +1,3 @@
+Use mknod c /dev/ANAND 300 0
+c stands for character driver /dev/name is same as name in program 300 is major no and 0 is minor no
+use 1st this and then insert the module
