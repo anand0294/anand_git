@@ -1,0 +1,17 @@
+Use insmod hello_pass_arg.ko valueAMT=6 nameAMT="ANAND" arrayAMT=100,200,300,400
+
+
+to pass the arguments. and to remove use rmmod, 
+to see info messages type dmesg.
+to see info about author, license, module description use
+modinfo filename.ko
+here filename is your name of file you want to check the info 
+
+
+The module will create an entry in /sys/module/hello_pass_arg/parameters/valueAMT
+
+and we can change it using :
+
+echo giveValue> /sys/module/hello_pass_arg/parameters/valueAMt(whose value you want to change).
+
+
