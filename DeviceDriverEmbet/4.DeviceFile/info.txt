@@ -1,0 +1,16 @@
+We can create the device file manually by using mknod.
+
+mknod -m <permission> <name> <device type> <major> <minor>
+
+-m <permission> is optional that sets permission bits to new device file
+
+<name> device name that should have full path (/dev/ANAND)
+
+<device type> put c for character or b for block driver
+
+<major> major no of driver
+<minor> minor no of driver
+
+See statiAllocation.c program and run above cmd to create device file manually.
+
+To create device file dynamically see program version 0.0.5
