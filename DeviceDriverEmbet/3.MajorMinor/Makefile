@@ -1,4 +1,5 @@
 obj-m+=statiAllocation.o
+obj-m+=dynamicAllocation.o
 
 KDIR = /lib/modules/$(shell uname -r)/build
 
