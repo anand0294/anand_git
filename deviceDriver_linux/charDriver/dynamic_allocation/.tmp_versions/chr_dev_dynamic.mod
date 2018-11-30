@@ -1,0 +1,2 @@
+/home/intern2/Git_Work/anand_git/deviceDriver_linux/charDriver/dynamic_allocation/chr_dev_dynamic.ko
+/home/intern2/Git_Work/anand_git/deviceDriver_linux/charDriver/dynamic_allocation/chr_dev_dynamic.o
