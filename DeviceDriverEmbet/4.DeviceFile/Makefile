@@ -1,7 +1,6 @@
 obj-m+=deviceCreation.o
-
 KDIR=/lib/modules/$(shell uname -r)/build
 all:
-	make -C	$(KDIR) M=$(shell pwd)	modules
+	make	-C	$(KDIR)		M=$(shell pwd)		modules
 clean:
-	make	-C	$(KDIR)	M=$(shell pwd)	clean
+	make	-C	$(KDIR)		M=$(shell pwd)		clean
