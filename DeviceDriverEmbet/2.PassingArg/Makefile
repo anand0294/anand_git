@@ -3,6 +3,6 @@ obj-m+=hello_pass_arg.o
 KDIR=/lib/modules/$(shell uname -r )/build
 
 all:
-	make	-C $(KDIR)	M=$(shell pwd)	modules
+	make	-C	$(KDIR)		M=$(shell pwd)	modules
 clean:
-	make -C	$(KDIR)	M=$(shell pwd)	modules
+	make	-C	$(KDIR)		M=$(shell pwd)	clean
