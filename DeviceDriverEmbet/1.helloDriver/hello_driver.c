@@ -12,7 +12,7 @@ static int __init hellow_world_init (void)
 {
 	printk(KERN_INFO "\nHellow to the World of Linux Device driver\n");
 	printk(KERN_DEBUG "Learn more things\n");
-	printl(KERN_INFO "Kernel module inserted Successfully\n");
+	printk(KERN_INFO "Kernel module inserted Successfully\n");
 	return 0;
 }
 
