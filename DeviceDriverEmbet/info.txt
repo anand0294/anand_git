@@ -1,0 +1,21 @@
+Que : Difference bteween modprobe and insmod?
+Ans : 1. modprobe calculates all of the module dependencies 
+	and then load the module along with the dependencies, 
+	while insmod does not care about dependencies, insmod 
+	only loads the module.
+
+2. How modprobe calculates module dependencies? First let me introduce you the depmod tool, this tool’s function is to calculate module dependencies for all modules located in /lib/modules/`uname -r`/ and then keep the dependencies information in /lib/modules/`uname -r`/modules.dep. depmod usually runs when system is booted or when there is new module installed or when you call depmod -a from shell. For example, consider module A, and this module depends on module B and module C.  depmod finds that module A needs module B and module C, and then depmod keeps this information in form of “A:B C” in /lib/modules/`uname -r`/modules.dep. Now, let us return to modprobe. modprobe basically reads the modules.dep file and then loads, using insmod, the module and all of the dependencies.
+
+3. So why modprobe /path/to/module.ko didn’t work? It is simply because modprobe only deals with modules in /lib/modules/`uname -r`/.  So, if you want it to work, create soft link from /path/to/module.ko to /lib/modules/`uname -r`/.
+
+ln -s /path/to/module.ko /lib/modules/`uname -r`
+
+and don’t forget to refresh the modules.dep
+
+depmod -a
+
+and call the modprobe, also loose the .ko
+
+modprobe module
+
+So that’s it.
