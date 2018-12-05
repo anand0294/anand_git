@@ -1,0 +1,10 @@
+So our Dummy driver is implemented successfully.
+
+To verify
+Use: echo 1 > /dev/MOHAN_CHARACTER_DRIVER
+
+Above command will invoke open write an release call.
+
+
+Use dmesg to see prints.
+modinfo filename.ko to see the filerelated info like version, author etc.
