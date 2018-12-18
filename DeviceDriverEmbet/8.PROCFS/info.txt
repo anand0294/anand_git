@@ -1,0 +1,3 @@
+insmod filename.ko to insert and rmmod filename to remove the kernel module
+use cat /proc/amt_proc
+and see the open release read functionality by using dmesg -c 

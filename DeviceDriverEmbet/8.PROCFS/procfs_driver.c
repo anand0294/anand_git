@@ -10,6 +10,7 @@
 
 #include <linux/cdev.h>
 #include <linux/slab.h>
+#include <linux/fs.h>
 #include <linux/uaccess.h>
 #include <linux/ioctl.h>
 #include <linux/kdev_t.h>
@@ -39,7 +40,7 @@ static int amt_open (struct inode * inode, struct file * fp );
 static int amt_release ( struct inode * inode, struct file * fp );
 static ssize_t amt_read (struct file * fp, char __user * buff, size_t size, loff_t * offset );
 static ssize_t amt_write ( struct file * fp, const char * buff, size_t size, loff_t * offset );
-unsigned long amt_ioctl ( struct file * fp, unsigned int cmd, unsigned long arg );
+static long amt_ioctl ( struct file * fp, unsigned int cmd, unsigned long arg );
 
 /*****procfs entry*****/
 static int proc_open(struct inode * inode , struct file * fp );
@@ -120,7 +121,7 @@ static ssize_t amt_read( struct file * fp, char __user * buff, size_t size, loff
 }
 
 
-unsigned long amt_ioctl ( struct file * fp, unsigned int cmd, unsigned long arg ){
+static long amt_ioctl ( struct file * fp, unsigned int cmd, unsigned long arg ){
 	printk(KERN_INFO "IOCTL operation Invoked\n");
 	switch(cmd){
 		case AMT_RDVALUE:
